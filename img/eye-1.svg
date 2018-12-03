@@ -1,0 +1,23 @@
+<svg id="face1_eye.svg" xmlns="http://www.w3.org/2000/svg" width="25.031" height="9.437" viewBox="0 0 25.031 9.437">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #474340;
+      }
+
+      .cls-2 {
+        fill: #474340;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_2_copy_3" data-name="Ellipse 2 copy 3" class="cls-1" cx="18.047" cy="5.937" r="2.453"/>
+  <path id="Shape_1_copy_2" data-name="Shape 1 copy 2" class="cls-2" d="M89.645,142.789l1.226,3.711,4.045-4.453-0.736-.989Zm-13.484,0L74.935,146.5l-4.045-4.453,0.736-.989Z" transform="translate(-70.375 -140.563)"/>
+  <circle id="Ellipse_2_copy_4" data-name="Ellipse 2 copy 4" class="cls-1" cx="7.016" cy="5.937" r="2.453"/>
+</svg>

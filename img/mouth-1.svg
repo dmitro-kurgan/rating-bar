@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13.281" height="5.938" viewBox="0 0 13.281 5.938">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #474340;
+        stroke: #474340;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="face1_mouth.svg" class="cls-1" d="M77.387,160.1v-1.237s3.155-3.71,6.091-3.71c2.554,0,6.167,3.71,6.167,3.71V160.1s-3.59-2.473-6.129-2.473C80.57,157.632,77.387,160.1,77.387,160.1Z" transform="translate(-76.875 -154.656)"/>
+</svg>
