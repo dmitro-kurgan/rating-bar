@@ -66,6 +66,8 @@ $sm: '(max-width: 767px)';
     border-radius: 50%;
     background-image: linear-gradient(to right, #ff9463 0%, #ffde6b 100%);
     transform: scale(0.8);
+    border: none;
+    outline: none;
     overflow: hidden;
     transition: 0.15s all linear;
     cursor: pointer;
