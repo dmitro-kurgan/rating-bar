@@ -1,0 +1,337 @@
+$sm: '(max-width: 767px)';
+
+.rating {
+  position: relative;
+  width: 350px;
+  height: 40px;
+  margin-bottom: 25px;
+  @media #{$sm} {
+    width: 290px;
+    animation: mobileRating 10s infinite;
+  }
+  &__bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 25px;
+    margin: auto;
+    border-radius: 13px;
+    background-color: #efefef;
+  }
+  &__list {
+    position: relative;
+    width: calc(100% - 20px);
+    height: 100%;
+    margin: auto;
+    padding-left: 0;
+    list-style: none;
+  }
+  &__eye, &__blush, &__mouth {
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: scale(0.8);
+    transition: 0.15s all linear;
+  }
+  &__eye, &__blush, &__mouth {
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+  &__eye {
+    z-index: 1;
+    &--left, &--right {
+      right: initial;
+      left: initial;
+      margin: 0;
+    }
+  }
+  &__blush {
+    top: 25px;
+    width: 32px;
+    height: 5px;
+    background-image: url(../img/blush.svg);
+  }
+  &__item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #ff9463 0%, #ffde6b 100%);
+    transform: scale(0.8);
+    overflow: hidden;
+    transition: 0.15s all linear;
+    cursor: pointer;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      background-image: url(../img/ellips.svg);
+    }
+    &:hover {
+      transform: scale(1);
+    }
+    &--first {
+      left: 0px;
+      background-image: linear-gradient(to right, #ce303a 0%, #ff4a5a 100%);
+      @media #{$sm} {
+        animation: mobileAngry 10s infinite;;
+      }
+      .rating {
+        &__eye {
+          top: 15px;
+          width: 25px;
+          height: 9px;
+          background-image: url(../img/eye-1.svg);
+          @media #{$sm} {
+            animation: eyeAngry 2.5s linear infinite;
+          }
+        }
+        &__mouth {
+          top: 27px;
+          width: 13px;
+          height: 6px;
+          background-image: url(../img/mouth-1.svg);
+          @media #{$sm} {
+            animation: mouthAngry 2.5s linear infinite;
+          }
+        }
+      }
+      &:hover {
+        .rating {
+          &__eye {
+            animation: eyeAngry 2.5s linear infinite;
+          }
+          &__mouth {
+            animation: mouthAngry 2.5s linear infinite;
+          }
+        }
+      }
+    }
+    &--second {
+      left: 21%;
+      @media #{$sm} {
+        animation: mobileSad 10s infinite;;
+      }
+      .rating {
+        &__eye {
+          top: 15px;
+          width: 28px;
+          height: 12px;
+          background-image: url(../img/eye-2.svg);
+          @media #{$sm} {
+            animation: eyeSad 1.5s linear infinite
+          }
+        }
+        &__mouth {
+          top: 32px;
+          width: 12px;
+          height: 2px;
+          background-image: url(../img/mouth-2.svg);
+          @media #{$sm} {
+            animation: mouthSad 1.5s linear infinite;
+          }
+        }
+      }
+      &:hover {
+        .rating {
+          &__eye {
+            animation: eyeSad 1.5s linear infinite;
+          }
+          &__mouth {
+            animation: mouthSad 1.5s linear infinite;
+          }
+        }
+      }
+    }
+    &--thirth {
+      left: calc(50% - 23px);
+      @media #{$sm} {
+        animation: mobileGood 10s infinite;;
+      }
+      .rating {
+        &__eye {
+          top: 15px;;
+          width: 11px;
+          height: 11px;
+          background-image: url(../img/eye-3.svg);
+          transform: scale(0.65);
+          &--left {
+            left: 10px;
+            @media #{$sm} {
+              animation: eyeGoodLeft 2.5s linear infinite;
+            }
+          }
+          &--right {
+            right: 10px;
+            @media #{$sm} {
+              animation: eyeGoodRight 2.5s linear infinite;
+            }
+          }
+        }
+        &__blush {
+          @media #{$sm} {
+            animation: blushGood 2.5s linear infinite;
+          }
+        }
+        &__mouth {
+          top: 30px;
+          width: 13px;
+          height: 6px;
+          background-image: url(../img/mouth-3.svg);
+          @media #{$sm} {
+            animation: mouthGood 2.5s linear infinite;
+          }
+        }
+      }
+      &:hover {
+        .rating {
+          &__eye {
+            &--left {
+              animation: eyeGoodLeft 2.5s linear infinite;
+            }
+            &--right {
+              animation: eyeGoodRight 2.5s linear infinite;
+            }
+          }
+          &__blush {
+            animation: blushGood 2.5s linear infinite;
+          }
+          &__mouth {
+            animation: mouthGood 2.5s linear infinite;
+          }
+        }
+      }
+    }
+    &--fourth {
+      left: 65%;
+      @media #{$sm} {
+        left: 62%;
+        animation: mobileHappy 10s infinite;;
+      }
+      .rating {
+        &__eye {
+          top: 13px;
+          width: 15px;
+          height: 15px;
+          background-image: url(../img/eye-4.svg);
+          &--left {
+            left: 6px;
+            transform: rotate(-25deg) scale(0.8);
+            @media #{$sm} {
+              animation: eyeLeftHappy 3s linear infinite;
+            }
+          }
+          &--right {
+            right: 6px;
+            @media #{$sm} {
+              animation: eyeRightHappy 3s linear infinite;
+            }
+          }
+        }
+        &__blush {
+          @media #{$sm} {
+            animation: blushHappy 3s linear infinite;
+          }
+        }
+        &__mouth {
+          top: 30px;
+          width: 16px;
+          height: 8px;
+          background-image: url(../img/mouth-4.svg);
+          @media #{$sm} {
+            animation: mouthHappy 3s linear infinite;
+          }
+        }
+      }
+      &:hover {
+        .rating {
+          &__eye {
+            &--left {
+              animation: eyeLeftHappy 3s linear infinite;
+            }
+            &--right {
+              animation: eyeRightHappy 3s linear infinite;
+            }
+          }
+          &__blush {
+            animation: blushHappy 3s linear infinite;
+          }
+          &__mouth {
+            animation: mouthHappy 3s linear infinite;
+          }
+        }
+      }
+    }
+    &--fifth {
+      left: calc(100% - 47px);
+      @media #{$sm} {
+        animation: mobileAmazing 10s infinite;;
+      }
+      .rating {
+        &__eye {
+          top: 10px;
+          width: 20px;
+          height: 20px;
+          background-image: url(../img/eye-5.svg);
+          &--left {
+            left: 4px;
+            transform: rotate(-25deg) scale(0.8);
+            @media #{$sm} {
+              animation: eyeLeftHappy 2.5s linear infinite;
+            }
+          }
+          &--right {
+            right: 4px;
+            @media #{$sm} {
+              animation: eyeRightHappy 2.5s linear infinite;
+            }
+          }
+        }
+        &__blush {
+          @media #{$sm} {
+            animation: blushHappy 2.5s linear infinite;
+          }
+        }
+        &__mouth {
+          top: 30px;
+          width: 16px;
+          height: 8px;
+          background-image: url(../img/mouth-4.svg);
+          @media #{$sm} {
+            animation: mouthHappy 2.5s linear infinite;
+          }
+        }
+      }
+      &:hover {
+        .rating {
+          &__eye {
+            &--left {
+              animation: eyeLeftHappy 2.5s linear infinite;
+            }
+            &--right {
+              animation: eyeRightHappy 2.5s linear infinite;
+            }
+          }
+          &__blush {
+            animation: blushHappy 2.5s linear infinite;
+          }
+          &__mouth {
+            animation: mouthHappy 2.5s linear infinite;
+          }
+        }
+      }
+    }
+  }
+}
